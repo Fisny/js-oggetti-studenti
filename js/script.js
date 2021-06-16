@@ -18,6 +18,10 @@
 // Il codice lo trovate qui:
 // https://github.com/ott-fogliata/boolean-code/tree/main/js-objects
 
+
+// PARTE 1
+
+
 var studenteSingolo = {
     infoStudenteSingolo: []
 }
@@ -28,12 +32,36 @@ while (studenteSingolo.infoStudenteSingolo.length < 1) {
     var studentAge = prompt("aggiungi età") 
 
     studenteSingolo.infoStudenteSingolo.push({ 
-        name: studentName, 
-        surname: studentSurname, 
-        age: studentAge, 
+        student_name: studentName, 
+        student_surname: studentSurname, 
+        student_age: studentAge, 
     });
 }
 
 for (var key in studenteSingolo.infoStudenteSingolo) {
     console.log(studenteSingolo.infoStudenteSingolo[key])
+}
+
+alert("visualizza il console.log")
+alert("parte 2")
+
+// PARTE 2 
+
+var studenti = {
+    infoStudenti: []
+}
+
+while (studenti.infoStudenti.length < 3) {
+    var studentsName = prompt("inserisci nome")
+    var studentsSurname = prompt ("inserisci cognome")
+
+    studenti.infoStudenti.push({
+        students_name: studentsName,
+        stundets_surname: studentsSurname,
+    })
+}
+
+for (var x = 0; x < studenti.infoStudenti.length; x++) {
+    
+    console.log(studenti.infoStudenti[x])
 }
