@@ -23,23 +23,13 @@
 
 
 var studenteSingolo = {
-    infoStudenteSingolo: []
+    name: 'bardi',
+    surname: 'fisniku',
+    age: 22,
 }
 
-while (studenteSingolo.infoStudenteSingolo.length < 1) {
-    var studentName = prompt("aggiungi nome") 
-    var studentSurname = prompt("aggiungi congome") 
-    var studentAge = prompt("aggiungi età") 
-
-    studenteSingolo.infoStudenteSingolo.push({ 
-        student_name: studentName, 
-        student_surname: studentSurname, 
-        student_age: studentAge, 
-    });
-}
-
-for (var key in studenteSingolo.infoStudenteSingolo) {
-    console.log(studenteSingolo.infoStudenteSingolo[key])
+for (var key in studenteSingolo) {
+    console.log(studenteSingolo[key])
 }
 
 alert("visualizza il console.log")
@@ -47,21 +37,34 @@ alert("parte 2")
 
 // PARTE 2 
 
-var studenti = {
-    infoStudenti: []
+var studenti = [
+    {
+        name: 'dario',
+        surname: 'rossi',
+        age: 22
+    },
+    {
+        name: 'luca',
+        surname: 'ianni',
+        age: 22
+    }
+]
+
+for (var x = 0; x < studenti.length; x++) {
+    console.log(studenti[x].name, studenti[x].surname)
 }
 
-while (studenti.infoStudenti.length < 3) {
-    var studentsName = prompt("inserisci nome")
-    var studentsSurname = prompt ("inserisci cognome")
+// parte 3
 
-    studenti.infoStudenti.push({
-        students_name: studentsName,
-        stundets_surname: studentsSurname,
-    })
-}
+var newName = prompt("inserisci nome")
+var newSurname = prompt ("inserisci cognome")
+var newAge = prompt ("inserisci età")
 
-for (var x = 0; x < studenti.infoStudenti.length; x++) {
-    
-    console.log(studenti.infoStudenti[x])
-}
+studenti.push({
+    name: newName,
+    surname: newSurname,
+    age: newAge,
+})
+
+console.log(studenti)
+
